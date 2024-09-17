@@ -21,27 +21,27 @@ A Machine Learning Model is presented, aimed to predict the Recovery Time in Cov
 
 The model attempts to predict the Recovery Time in days, given the next input variables:
 
-* Age (in years)
+* Edad (age in years)
 * Sex
-    * Sex_F (1: female; 0: other)
-    * Sex_M (1: male; 0: other)
+  * S_F (1: female; 0: other)
+  * S_M (1: male; 0: other)
 * Type of Contagion
-    * C_Community (1: community infection; 0: other)
-    * C_Imported (1: imported case; 0: other)
-    * C_Related (1: related case; 0: other)
+  * C_Comunitaria (1: community infection; 0: other)
+  * C_Importado (1: imported case; 0: other)
+  * C_Relacionado (1: related case; 0: other)
 * Case treatment location
-    * U_Home (1: treated at home; 0: other)
-    * U_Hospital (1: treated at hospital - not ICU; 0: other)
-    * U_Hospital_ICU (1: treated at hospital with ICU; 0: other)
-* Infection status
-    * E_Severe (1: status severe; 0: other)
-    * E_Slight (1: status slight; 0: other)
-    * E_Moderate (1: status moderate; 0: other)
+  * U_Casa (1: treated at home; 0: other)
+  * U_Hospital (1: treated at hospital - not ICU; 0: other)
+  * U_Hospital_UCI (1: treated at hospital with ICU; 0: other)
+* Case severity
+  * E_Grave (1: severe; 0: other)
+  * E_Leve (1: slight; 0: other)
+  * E_Moderado (1: moderate; 0: other)
 * Ethnicity
-    * P_Indigenous (1: ethnicity indigenous; 0: other)
-    * P_Black (1: ethnicity black; 0: other)
-    * P_Other (1: ethnicity other; 0: other)
-    * P_ROM (1: ethnicity ROM; 0: other)
+  * P_Indígena (1: ethnicity indigenous; 0: other)
+  * P_Negro (1: ethnicity black; 0: other)
+  * P_Otro (1: ethnicity other; 0: other)
+  * P_ROM (1: ethnicity ROM; 0: other)
 
 ### Hypothesis (Recovery Time vs Case Treatment Location)
 
@@ -52,7 +52,7 @@ The model attempts to predict the Recovery Time in days, given the next input va
 
 * $H_1$: The type of care received significantly affects recovery time.
 ```math
-$H_1 = \beta_{U\_Casa} \neq 0 \ \ \lor \ \ \beta_{U\_Hospital} \neq 0 \ \ \lor \ \ \beta_{U\_Hospital\_UCI} \neq 0$
+  H_1 = \beta_{U\_Casa} \neq 0 \ \ \lor \ \ \beta_{U\_Hospital} \neq 0 \ \ \lor \ \ \beta_{U\_Hospital\_UCI} \neq 0
 ```
 
 ## Results
